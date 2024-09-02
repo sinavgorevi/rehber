@@ -3,6 +3,12 @@ import pandas as pd
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
+# Bot token'ını çevre değişkeninden al
+TOKEN = os.environ.get("BOT_TOKEN")
+
+# Updater'ı oluştururken bu token'ı kullanın
+updater = Updater(TOKEN, use_context=True)
+
 # Bot token
 BOT_TOKEN = "YOUR_BOT_TOKEN"
 FILE_PATH_TXT = "file_path.txt"
